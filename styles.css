@@ -1,8 +1,83 @@
-/*
+/* nianlun styles */
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+.nianlun-error {
+    color: var(--text-error);
+    background: var(--background-modifier-error);
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
 
-If your plugin does not need CSS, delete this file.
+.nianlun-container {
+    width: 100%;
+    margin: 1.5em 0;
+    padding: 1em;
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--background-modifier-border);
+    overflow-x: auto;
+}
 
-*/
+.nianlun-tracks-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nianlun-track {
+    position: relative;
+    height: 38px;
+    background: repeating-linear-gradient(90deg, transparent, transparent calc(10% - 1px), var(--background-modifier-border-hover) 10%);
+    border-radius: 4px;
+}
+
+.nianlun-event {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+
+.nianlun-capsule {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-primary);
+    border: 1px solid var(--interactive-accent);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 12px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: var(--text-normal);
+}
+
+.nianlun-capsule:hover {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    box-shadow: 0 0 12px var(--interactive-accent);
+    transform: translateY(-2px);
+    z-index: 10;
+}
+
+.nianlun-name {
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.nianlun-time {
+    font-size: 0.7em;
+    opacity: 0.7;
+}
+
+.nianlun-capsule:hover .nianlun-time {
+    opacity: 1;
+}

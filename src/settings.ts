@@ -1,18 +1,18 @@
 import {App, PluginSettingTab, Setting} from "obsidian";
-import MyPlugin from "./main";
+import NianLunPlugin from "./main";
 
-export interface MyPluginSettings {
+export interface NianLunSettings {
 	mySetting: string;
 }
 
-export const DEFAULT_SETTINGS: MyPluginSettings = {
+export const DEFAULT_SETTINGS: NianLunSettings = {
 	mySetting: 'default'
 }
 
-export class SampleSettingTab extends PluginSettingTab {
-	plugin: MyPlugin;
+export class NianLunSettingTab extends PluginSettingTab {
+	plugin: NianLunPlugin;
 
-	constructor(app: App, plugin: MyPlugin) {
+	constructor(app: App, plugin: NianLunPlugin) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}
@@ -23,10 +23,10 @@ export class SampleSettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName('Settings #1')
-			.setDesc('It\'s a secret')
+			.setName('Theme settings')
+			.setDesc('Advanced settings will be added here.')
 			.addText(text => text
-				.setPlaceholder('Enter your secret')
+				.setPlaceholder('Enter your config')
 				.setValue(this.plugin.settings.mySetting)
 				.onChange(async (value) => {
 					this.plugin.settings.mySetting = value;

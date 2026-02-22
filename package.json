@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "obsidian-nianlun",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "An Obsidian plugin for creating beautiful, code-driven historical timelines. | 基于代码块的 Obsidian 现代化时间轴/年轮可视化插件。",
 	"main": "main.js",
 	"type": "module",
 	"scripts": {
